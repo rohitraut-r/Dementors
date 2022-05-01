@@ -1,0 +1,59 @@
+.Container ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.Container ul li {
+  padding: 20px;
+  /*width: 400px;*/
+  display: block;
+  color: #ddd;
+  text-decoration: none;
+  background: #21263E;
+ 
+}
+
+.Container ul li ul {
+  display: none;
+}
+
+.Container ul li ul li{
+  padding: 10px;
+  margin-top:10px;
+}
+
+.Container ul li:hover ul {
+  display: flex;
+  /*flex-direction: column;*/
+}
+
+.Container ul li:hover a{
+  color: #fff;
+}
+.Container ul li:active a{
+   color: #fff;
+}
+
+.sub-dropdown{
+  background-color: white;
+    position: absolute;
+    left: 159px;
+    width: 150px;
+    top: 0px;
+    display: none;
+  /*padding: 10px;*/
+}
+#subdrop:hover > .sub-dropdown{
+   display: block;
+
+
+}
+#subdrop:hover + .sub-dropdown{
+   display: block;
+
+
+}
+

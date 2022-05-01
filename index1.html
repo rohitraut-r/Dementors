@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+      crossorigin="anonymous"/>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"/>
+    <link
+      href="https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css"
+      rel="stylesheet"/>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mystyle.css" />
+
+    <title>Colleges for you</title>
+  </head>
+
+
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark py-3 fixed-top">
+      <div class="container">
+        <a href="#" class="navbar-brand">COLLEGES FOR YOU</a>
+        
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navmenu"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navmenu">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a href="index1.html" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item">
+              <div class="dropdown">
+                <a href="#questions" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Colleges
+                <div class="dropdown-menu bg-dark">
+                  <a href="sdc.php?code=asmt" class="dropdown-item text-light bg-dark">ASMT</a>
+                  <a href="sdc.php?code=sdc" class="dropdown-item text-light bg-dark">SDC</a>
+                  <a href="sdc.php?code=ncc" class="dropdown-item text-light bg-dark">NCC</a>
+                </div>
+              </a>
+              </div>
+
+            </li>
+            <li class="nav-item">
+              <div class="dropdown">
+                <a href="#questions" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Programs
+                <div class="dropdown-menu bg-dark">
+                  <a href="#" class="dropdown-item text-light bg-dark">BIM</a>
+                  <a href="#" class="dropdown-item text-light bg-dark">BCA</a>
+                  <a href="#" class="dropdown-item text-light bg-dark">BBM</a>
+                  <a href="#" class="dropdown-item text-light bg-dark">Bsc.CSIT</a>
+                </div>
+                </a>
+              </div>
+
+            </li>
+             <li class="nav-item">
+              <a href="#questions" class="nav-link">Blog</a>
+            </li>
+             <li class="nav-item">
+              <a href="#contact" class="nav-link">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+
+
+    <!-- Showcase -->
+    <section class="bg-dark text-light p-5 p-lg-0 pt-lg-5 text-center text-sm-start">
+      <div class="container">
+        <div class="d-sm-flex align-items-center justify-content-between">
+          <div>
+            <h1>Find your <span class="text-warning"> Ideal College </span></h1>
+            <p class="lead my-4">
+              How many places do you have to visit to find your ideal college?<br>
+              <span class="text-warning"><b>Just One.</b></span>
+            </p>
+            <button
+              class="btn btn-primary btn-lg"
+              data-bs-toggle="modal"
+              data-bs-target="#enroll"
+            >
+              Subscribe Us
+            </button>
+          </div>
+          <img
+            class="img-fluid w-50 d-none d-sm-block"
+            src="showcase.svg"
+            alt=""
+          />
+        </div>
+      </div>
+    </section>
+
+
+
+    <!-- Newsletter -->
+    <section class="bg-primary text-light p-5 d-flex justify-content-center">
+      <div class="container">
+          <div class="input-group news-input ">
+            <form action="search.php" method="get">
+              
+              <input type="text" class="form-control" name="search"size=50 placeholder="Type here" />
+              <input type="submit" name="" class="btn btn-dark btn-lg">
+            </form>
+
+              
+    <div class="dropdown">
+        <a href="#" class="dropdown-toggle bg-dark text-light m-1" data-bs-toggle="dropdown">&nbsp;Filter</a>
+        <div class="dropdown-menu">
+            <a href="" class="<!-- dropdown-item -->" id="subdrop">Course</a>
+          <!--   <a href="javascript:void(0)" id="subdrop" style="background-color: blue;">Course -->
+              <div class="sub-dropdown">
+                <a href="" style="display:block;" class="dropdown-item">BIM</a>
+                <a href="" style="display:block;" class="dropdown-item">BCA</a>
+                <a href="" style="display:block" class="dropdown-item">BIM</a>
+              </div>
+            </a>
+
+            <a href="#" class="dropdown-item">fees</a>
+            <a href="#" class="dropdown-item">location</a>
+        </div>
+    </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!--  Question Accordion   -->
+    <section id="questions" class="p-5">
+      <div class="container">
+        <h2 class="text-center mb-4">Frequently Asked Questions</h2>
+        <div class="accordion accordion-flush" id="questions">
+          <!-- Item 1 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#question-one"
+              >
+                Where exactly are you located?
+              </button>
+            </h2>
+            <div
+              id="question-one"
+              class="accordion-collapse collapse"
+              data-bs-parent="#questions"
+            >
+              <div class="accordion-body">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam
+                beatae fuga animi distinctio perspiciatis adipisci velit maiores
+                totam tempora accusamus modi explicabo accusantium consequatur,
+                praesentium rem quisquam molestias at quos vero. Officiis ad
+                velit doloremque at. Dignissimos praesentium necessitatibus
+                natus corrupti cum consequatur aliquam! Minima molestias iure
+                quam distinctio velit.
+              </div>
+            </div>
+          </div>
+          <!-- Item 2 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#question-two"
+              >
+                How much does it cost to attend?
+              </button>
+            </h2>
+            <div
+              id="question-two"
+              class="accordion-collapse collapse"
+              data-bs-parent="#questions"
+            >
+              <div class="accordion-body">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam
+                beatae fuga animi distinctio perspiciatis adipisci velit maiores
+                totam tempora accusamus modi explicabo accusantium consequatur,
+                praesentium rem quisquam molestias at quos vero. Officiis ad
+                velit doloremque at. Dignissimos praesentium necessitatibus
+                natus corrupti cum consequatur aliquam! Minima molestias iure
+                quam distinctio velit.
+              </div>
+            </div>
+          </div>
+          <!-- Item 3 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#question-three"
+              >
+                What do I need to Know?
+              </button>
+            </h2>
+            <div
+              id="question-three"
+              class="accordion-collapse collapse"
+              data-bs-parent="#questions"
+            >
+              <div class="accordion-body">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam
+                beatae fuga animi distinctio perspiciatis adipisci velit maiores
+                totam tempora accusamus modi explicabo accusantium consequatur,
+                praesentium rem quisquam molestias at quos vero. Officiis ad
+                velit doloremque at. Dignissimos praesentium necessitatibus
+                natus corrupti cum consequatur aliquam! Minima molestias iure
+                quam distinctio velit.
+              </div>
+            </div>
+          </div>
+          <!-- Item 4 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#question-four"
+              >
+                How Do I sign up?
+              </button>
+            </h2>
+            <div
+              id="question-four"
+              class="accordion-collapse collapse"
+              data-bs-parent="#questions"
+            >
+              <div class="accordion-body">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam
+                beatae fuga animi distinctio perspiciatis adipisci velit maiores
+                totam tempora accusamus modi explicabo accusantium consequatur,
+                praesentium rem quisquam molestias at quos vero. Officiis ad
+                velit doloremque at. Dignissimos praesentium necessitatibus
+                natus corrupti cum consequatur aliquam! Minima molestias iure
+                quam distinctio velit.
+              </div>
+            </div>
+          </div>
+          <!-- Item 5 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#question-five"
+              >
+                Do you help me find a job?
+              </button>
+            </h2>
+            <div
+              id="question-five"
+              class="accordion-collapse collapse"
+              data-bs-parent="#questions"
+            >
+              <div class="accordion-body">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam
+                beatae fuga animi distinctio perspiciatis adipisci velit maiores
+                totam tempora accusamus modi explicabo accusantium consequatur,
+                praesentium rem quisquam molestias at quos vero. Officiis ad
+                velit doloremque at. Dignissimos praesentium necessitatibus
+                natus corrupti cum consequatur aliquam! Minima molestias iure
+                quam distinctio velit.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+<!-- Developer -->
+    <section id="instructors" class="p-5 bg-primary">
+      <div class="container">
+        <h2 class="text-center text-white">Our Developers</h2>
+        <p class="lead text-center text-white mb-5">
+          Our Team members all have 1+ years working as a web developer in the
+          industry
+        </p>
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-3">
+            <div class="card bg-light">
+              <div class="card-body text-center">
+                <img
+                  src=""
+                  class="rounded-circle mb-3"
+                  alt=""
+                />
+                <h3 class="card-title mb-3">Bikrant Maharjan</h3>
+                <p class="card-text">
+                  BIM 4th SEMESTER<br>
+                  Presenting Expert
+                </p>
+                <a href="#"><i class="bi bi-twitter text-dark mx-1"></i></a>
+                <a href="#"><i class="bi bi-facebook text-dark mx-1"></i></a>
+                <a href="#"><i class="bi bi-linkedin text-dark mx-1"></i></a>
+                <a href="#"><i class="bi bi-instagram text-dark mx-1"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3">
+            <div class="card bg-light">
+              <div class="card-body text-center">
+                <img
+                  src=""
+                  class="rounded-circle mb-3"
+                  alt=""
+                />
+                <h3 class="card-title mb-3">Kamal Bamma</h3>
+                <p class="card-text">
+                  BIM 4th SEMESTER<br>
+                  Forntend Expert
+                </p>
+                <a href="#"><i class="bi bi-twitter text-dark mx-1"></i></a>
+                <a href="#"><i class="bi bi-facebook text-dark mx-1"></i></a>
+                <a href="#"><i class="bi bi-linkedin text-dark mx-1"></i></a>
+                <a href="#"><i class="bi bi-instagram text-dark mx-1"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3">
+            <div class="card bg-light">
+              <div class="card-body text-center">
+                <img
+                  src=""
+                  class="rounded-circle mb-3"
+                  alt=""
+                />
+                <h3 class="card-title mb-3">Rohit Raut</h3>
+                <p class="card-text">
+                  BIM 4th SEMESTER<br>
+                  Backend Expert
+                </p>
+                <a href="#"><i class="bi bi-twitter text-dark mx-1"></i></a>
+                <a href="#"><i class="bi bi-facebook text-dark mx-1"></i></a>
+                <a href="#"><i class="bi bi-linkedin text-dark mx-1"></i></a>
+                <a href="#"><i class="bi bi-instagram text-dark mx-1"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3">
+            <div class="card bg-light">
+              <div class="card-body text-center">
+                <img
+                  src=""
+                  class="rounded-circle mb-3"
+                  alt=""
+                />
+                <h3 class="card-title mb-3">Utsav Bhattarai</h3>
+                <p class="card-text">
+                 BIM 4th SEMESTER<br>
+                 Research Expert
+                </p>
+                <a href="#"><i class="bi bi-twitter text-dark mx-1"></i></a>
+                <a href="#"><i class="bi bi-facebook text-dark mx-1"></i></a>
+                <a href="#"><i class="bi bi-linkedin text-dark mx-1"></i></a>
+                <a href="#"><i class="bi bi-instagram text-dark mx-1"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Contact Us -->
+    <section id="contact" class="p-5">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-md">
+            <h2 class="text-center mb-4">Contact Info</h2>
+            <ul class="list-group list-group-flush lead">
+              <li class="list-group-item">
+                <span class="fw-bold">Main Location:</span> 50 street gongabu 
+              </li>
+              <li class="list-group-item">
+                <span class="fw-bold">Enrollment Phone:</span> +977-9808722672
+              </li>
+              <li class="list-group-item">
+                <span class="fw-bold">Student Phone:</span> +977-9862219763
+              </li>
+              <li class="list-group-item">
+                <span class="fw-bold">Enrollment Email:</span>
+                Enrollmentemail.@gmail.com
+              </li>
+              <li class="list-group-item">
+                <span class="fw-bold">Student Email:</span>
+                Studentemail.@gmail.com
+              </li>
+            </ul>
+          </div>
+          <div class="col-md">
+            <div id="map"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+      <!-- Footer  -->
+    <footer class="p-5 bg-dark text-white text-center position-relative">
+      <div class="container">
+        <p class="lead">Copyright &copy; 2022 COLLEGES FOR YOU</p>
+
+        <a href="#" class="position-absolute bottom-0 end-0 p-5">
+          <i class="bi bi-arrow-up-circle h1"></i>
+        </a>
+      </div>
+    </footer>
+
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+      crossorigin="anonymous"></script>
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.js"></script>
+
+<!--     <script>
+      function handle(){
+               const subdropdown=document.querySelector("#subdrop")
+      subdropdown.nextElementSibling.classList.toggle("active")
+      }
+    
+      mapboxgl.accessToken =
+        'pk.eyJ1IjoiYnRyYXZlcnN5IiwiYSI6ImNrbmh0dXF1NzBtbnMyb3MzcTBpaG10eXcifQ.h5ZyYCglnMdOLAGGiL1Auw'
+      var map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/streets-v11',
+        center: [-71.060982, 42.35725],
+        zoom: 18,
+      })
+ 
+    </script> -->
+  </body>
+</html>
